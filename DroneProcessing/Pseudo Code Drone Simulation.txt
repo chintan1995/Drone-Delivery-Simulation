@@ -1,0 +1,45 @@
+Read the file drone.dro and store the data in a linkedlist (ll_drone)
+Read the file deliveries.dro and store the data in a linkedlist (ll_deliveries)
+infinite while loop
+	Display the menu
+	scan for the user's choice
+	if choice==1
+		Display the ll_drone
+	if choice==2
+		Display the ll_deliveries
+	if choice==3
+		Scan the warehouse co-ordinates
+	if choice==4
+		Add a delivery node at the end of the ll_deliveries
+	if choice==5
+		if warehouse location is NOT set
+			Display "Warehouse location NOT set"
+		else if ll_deliveries is empty
+			Display "No deliveries remaing"
+		else
+			Scan the name of drone to dispatch
+			Search the drone in ll_drone
+			if the drone exists
+				if drone capacity > delivery total weight
+					Calculate the distance from the origin to the destination
+					calculate time taken by drone to travel
+					Display the time taken
+					Open dispatch_log.txt file
+					Write to the file the dispatch details
+					Close the dispatch_log.txt
+					Remove the first delivery(dispatched delivery) from the ll_deliveries
+				else
+					Display "Drone cannot carry that much weight"
+			else
+				Display "No such drone exists"
+	if choice==6
+		Display "save and exit"
+		Display "Exit"
+		Scan user choice
+		if choice==1
+			Open deliveries.dro file
+			Write into the file the ll_deliveries in the same order
+			Close deliveries.dro file
+			return;
+		else
+			return;
